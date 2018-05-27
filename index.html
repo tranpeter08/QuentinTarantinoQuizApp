@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="description" content="A quiz for Quentin Tarantino Movie fans">
+  <meta name="keywords" content="...">
+  <meta name="author" content="Peter Tran">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quentin Tarantino Movie Quiz</title>
+	<link href="https://fonts.googleapis.com/css?family=Goblin+One" rel="stylesheet">
+	<link rel="stylesheet" href="float.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	
+</head>
+<body>
+	<header role = 'banner'>
+		<h1>
+			<button role="button" class='headerButton' id="js-resetQuiz">Quentin Tarantino Movie Quiz</button>
+		</h1>
+	</header>
+	<main>
+		<!--Main Page-->
+		<div id="js-mainPage">
+			<div class = 'row'>
+				<div class = 'col-12'>
+					<div class="introContainer">
+						<p class="intro">Are you a fan of Quentin Tarantino Movies? 
+							Test your knowledge to see how big a fan you are by clicking on the button below!</p>
+					</div>
+				</div>
+			</div>
+			<div class = 'row'>
+				<div class="col-12">
+					<div class="startQuizContainer">	
+						<button 
+							type="button"
+							class="startButton"
+							id="js-startButton" 
+							role = 'button' 
+							name="startquiz">Start Quiz!
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Question Page-->
+		<div id='js-questionPage' class="hidden js-reset">
+			<h2>
+				<div class="row">
+					<div class="col-12">
+						<div class="question numContainer">
+							<span class="spanQuest">Question: </span><span class="spanQuest" id='js-questionNum'></span>
+						</div>
+						<div class="question scoreContainer">
+							<span class="spanQuest">Score: </span><span class="spanQuest" id='js-score'></span>
+						</div>
+					</div>
+				</div>
+			</h2>
+			<div class="row">
+				<div class="col-12">	
+					<div class="questionContainer">
+						<p class="questText" id="js-question"></p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<form role ='form' class='answerForm' id="js-form">
+						<fieldset>
+							<div class="row">
+								<div class="col-6">
+									<div class="noWrap" for="answer1">
+										<input
+											type="radio" 
+											id="answer1" 
+											value="" 
+											name="js-answer" 
+											required>
+										<label for="answer1" ></label>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="noWrap" for="answer2">
+										<input 
+											type="radio" 
+											id="answer2" 
+											value="" 
+											name="js-answer">
+										<label for="answer2" ></label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6">
+									<div class="noWrap" for="answer3">
+										<input
+											type="radio" 
+											id="answer3" 
+											value="" 
+											name="js-answer">
+										<label for="answer3"></label>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="noWrap" for="answer4">
+										<input
+											type="radio" 
+											id="answer4" 
+											value="" 
+											name="js-answer">
+										<label for="answer4"></label>
+									</div>
+								</div>	
+							</div>
+							<div class='buttonContainer'>
+								<button 
+									class="submitButton" 
+									id='js-submitButton' 
+									type="submit" 
+									role="button">Submit</button>	
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--Feedback-->
+		<div id='js-feedback' class="hidden js-reset">
+			<div class="">
+				<h2 id="js-feedbackHead"></h2>
+			</div>
+			<div class="row">
+				<div class="row-12">
+					<div class='imageContainer'>
+						<img 
+						src="" 
+						alt=""
+						id="feedbackImage">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div>
+						<p class="feedBack"><span  id='js-feedbackResult'></span><span id='js-feedbackText'></span></p>
+					</div>
+				</div>
+			</div>	
+			<div class="buttonContainer">
+			<button 
+				class="nextButton"
+				id="js-nextQuestion" 
+				type="button"
+				role="button">Click to continue</button>
+			</div>
+		</div>
+		<!--Result-->
+		<div class="hidden js-result js-reset">
+			<h2>Results</h2>
+			<div class='imageContainer'>
+				<img id="js-resultImg">
+			</div>
+			<h3>
+				<div>
+					Your Final Score: <span id='js-finalScore'></span>
+				</div>
+			</h3>
+			<div class="row">
+				<div class="col-12">
+					<div>
+						<p class="result"><span id='js-resultMsg1'></span>You Scored<span id='js-scorePercent'></span><span id='js-resultMsg2'></span></p>
+					</div>
+				</div>
+			</div>
+			<div class="buttonContainer">
+				<button 
+				role="button"
+				class="retakeButton" 
+				id="js-retakeQuiz" 
+				type="button">Retake Quiz</button>	
+			</div>
+		</div>
+	</main>
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous"></script>
+	<script src="store.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
