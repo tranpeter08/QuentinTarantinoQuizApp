@@ -102,7 +102,7 @@ fieldset{
 .startButton{
 	border: 2px white solid;
 	font-family: 'Goblin One', cursive;
-	color: red;
+	color: rgb(14, 97, 175);
 	font-size: 25px;
 	transition: 0.2s;
 	padding:1em;
@@ -180,7 +180,7 @@ input[type='radio']{
 .submitButton{
 	border-radius: 8px;
 	font-family: 'Goblin One', cursive;
-	color: red;
+	color: rgb(0, 119, 255);
 	font-size: 20px;
 	transition: 0.2s;
 	padding:10px;
